@@ -5,21 +5,21 @@
 	<parameter name="xmlPath" value="\src\main\resources\testSuite.xml"></parameter>
 
 	<test name="firefox_test">
-		<parameter name="host" value="localhost"></parameter>
+		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.cs.test.SeleniumTest" />
 		</classes>
 	</test>
-
+<!-- 
 	<test name="chrome_test">
-		<parameter name="host" value="localhost"></parameter>
+		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.cs.test.SeleniumTest" />
 		</classes>
 	</test>
-	<!-- <test name="ChromeTest"> <parameter name="browser" value="chrome" /> 
+ <test name="ChromeTest"> <parameter name="browser" value="chrome" /> 
 		<classes> <class name="com.cs.test.SeleniumTest" /> </classes> </test> <test 
 		name="IETest"> <parameter name="browser" value="ie" /> <classes> <class name="com.cs.test.SeleniumTest" 
 		/> </classes> </test> -->

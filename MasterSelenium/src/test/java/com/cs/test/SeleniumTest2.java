@@ -43,25 +43,12 @@
 //
 //	// @Parameters( { "url", "query-string", "btn-id", "txt-id", "verify-String"
 //	// }) 按先后顺序
-//	public void dd(){
-//		
-//	}
 //	
 //	
 //	@Parameters("xmlPath")
 //	@BeforeTest
 //	public void beforeTest(String xmlPath) throws InterruptedException, IOException {
 //
-//		try {
-//			xmlPath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main"
-//					+ File.separator + "resources" + File.separator + "baiducase.xml";
-//			Object object = XMLUtils.xmlToBean(xmlPath, WebSuite.class);
-//			WebSuite students = (WebSuite) object;
-//			WebSuite students1 = (WebSuite) object;
-//
-//		} catch (JAXBException e) {
-//			e.printStackTrace();
-//		}
 //
 //		String Node = "http://10.222.48.46:5555/wd/hub";
 //

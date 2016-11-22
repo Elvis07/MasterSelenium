@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -114,16 +114,13 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;parameter name=&quot;xmlPath&quot; value=&quot;\src\main\resources\testSuite.xml&quot;/&gt;
-  &lt;test name=&quot;baidu_chrome&quot;&gt;
+  &lt;test name=&quot;firefox_test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;host&quot; value=&quot;http://10.222.48.46:5555/wd/hub&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.cs.test.SeleniumTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- baidu_chrome --&gt;
-  &lt;test name=&quot;google_firefox&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.cs.test.SeleniumTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- google_firefox --&gt;
+  &lt;/test&gt; &lt;!-- firefox_test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,10 +132,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">baidu_chrome (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">google_firefox (1 class)</span>
+                <span class="test-name">firefox_test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,17 +190,13 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.cs.test.SeleniumTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">beforeTest(\src\main\resources\testSuite.xml)</span>
+                <span class="method-name">beforeTest(\src\main\resources\testSuite.xml, http://10.222.48.46:5555/wd/hub, firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">beforeTest(\src\main\resources\testSuite.xml)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">5013 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
