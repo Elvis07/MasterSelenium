@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebSuite>
+	<WebCase>
+		<Description>测试百度</Description>
+		<Task>
+			<TaskSequence>1</TaskSequence>
+			<Locator>locator1</Locator>
+			<InputValue>value1</InputValue>
+			<Url>http://www.baidu.com</Url>
+			<Description>opensite</Description>
+		</Task>
+		<Task>
+			<TaskSequence>2</TaskSequence>
+			<Locator>locator2</Locator>
+			<InputValue>value2</InputValue>
+			<Description>click</Description>
+		</Task>
+	</WebCase>
+	<WebCase>
+		<Description>测试谷歌</Description>
+		<Task>
+			<TaskSequence>1</TaskSequence>
+			<Locator>locator1</Locator>
+			<InputValue>value1</InputValue>
+			<Url>http://www.google.com</Url>
+			<Description>opensite</Description>
+		</Task>
+		<Task>
+			<TaskSequence>2</TaskSequence>
+			<Locator>locator2</Locator>
+			<InputValue>value2</InputValue>
+			<Description>click</Description>
+		</Task>
+	</WebCase>
+</WebSuite>

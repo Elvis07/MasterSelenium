@@ -12,8 +12,6 @@ public class WebCase {
 
 	@XmlElement(name = "Task")
 	public List<Task> tasks;
-	@XmlElement(name = "Host")
-	public String host;
 	@XmlElement(name = "Description")
 	public String description;
 
@@ -27,14 +25,6 @@ public class WebCase {
 
 	public void setTasks(List<Task> tasks) {
 		this.tasks = tasks;
-	}
-
-	public String getHost() {
-		return host;
-	}
-
-	public void setHost(String host) {
-		this.host = host;
 	}
 
 	public String getDescription() {
