@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <parameter name="browser" value="firefox"/>
-  <test name="FirefoxTest(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
+  <parameter name="xml" value="/src/main/resources/baiducase.xml"/>
+  <test name="test(failed)" parallel="tests">
+    <parameter name="xml" value="/src/main/resources/baiducase.xml"/>
     <classes>
-      <class name="com.cs.util.SeleniumTest">
+      <class name="com.cs.test.SeleniumTest">
         <methods>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
           <include name="test"/>
         </methods>
-      </class> <!-- com.cs.util.SeleniumTest -->
+      </class> <!-- com.cs.test.SeleniumTest -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

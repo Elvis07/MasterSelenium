@@ -1,4 +1,4 @@
-package com.cs.util;
+package com.cs.test;
 
 import org.junit.After;
 import org.openqa.selenium.By;

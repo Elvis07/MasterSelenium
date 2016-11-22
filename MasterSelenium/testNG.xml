@@ -4,52 +4,19 @@
 
 
 
+	<test name="test">
 
-   <test name="FirefoxTest">
-      <parameter name="browser" value="firefox" />
-      <classes>
-             <class name="com.cs.util.SeleniumTest" />
-      </classes>
-   </test>
-   
-   
-   <!--  
-   <test name="FirefoxTest">
-      <parameter name="browser" value="firefox" />
-      <classes>
-             <class name="com.cs.util.SeleniumTest" />
-      </classes>
-   </test>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   <test name="ChromeTest">
-      <parameter name="browser" value="chrome" />
-      <classes>
-             <class name="com.cs.util.SeleniumTest" />
-      </classes>
-   </test>
+		<parameter name="xmlPath" value="\src\main\resources\baiducase.xml"></parameter>
+		<classes>
+			<class name="com.cs.test.SeleniumTest" />
+		</classes>
+	</test>
 
-   <test name="IETest">
-      <parameter name="browser" value="ie" />
-      <classes>
-             <class name="com.cs.util.SeleniumTest" />
-      </classes>
-   </test>
-   -->
+
+	<!-- <test name="FirefoxTest"> <parameter name="browser" value="firefox" 
+		/> <classes> <class name="com.cs.test.SeleniumTest" /> </classes> </test> 
+		<test name="ChromeTest"> <parameter name="browser" value="chrome" /> <classes> 
+		<class name="com.cs.test.SeleniumTest" /> </classes> </test> <test name="IETest"> 
+		<parameter name="browser" value="ie" /> <classes> <class name="com.cs.test.SeleniumTest" 
+		/> </classes> </test> -->
 </suite>
