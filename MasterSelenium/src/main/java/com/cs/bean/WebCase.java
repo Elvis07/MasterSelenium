@@ -14,6 +14,8 @@ public class WebCase {
 	public List<Task> tasks;
 	@XmlElement(name = "Description")
 	public String description;
+	@XmlElement(name = "TimeOut")
+	public int timeOut;
 
 	public WebCase() {
 		super();
@@ -33,6 +35,14 @@ public class WebCase {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public int getTimeOut() {
+		return timeOut;
+	}
+
+	public void setTimeOut(int timeOut) {
+		this.timeOut = timeOut;
 	}
 
 }

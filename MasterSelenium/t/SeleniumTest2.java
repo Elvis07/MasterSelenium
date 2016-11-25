@@ -14,7 +14,6 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -27,7 +26,7 @@ import com.cs.util.RemoteWebDriverUtil;
 public class SeleniumTest2 {
 
 	public WebDriver driver;
-	String url = "https://jazz.net/action/register";
+	String url = "https://www.hapag-lloyd.com/en/online-business/tracing/tracing-by-booking.html";
 	String number="97564765";
 	@Parameters("browser")
 //	@Parameters( { "host", "browser", "xmlPath"})// 按先后顺序
@@ -79,21 +78,38 @@ public class SeleniumTest2 {
 
 		driver.manage().window().maximize();
 		driver.get(url);
-		
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		WebElement country = driver.findElement(By.xpath("//input[@id='userId']"));
-		country.sendKeys("dd");
-		WebElement country1 = driver.findElement(By.xpath("//input[@id='termsAgreed1']"));
-		country1.click();
 		
-//		WebElement country = driver.findElement(By.id("countryResidence"));//Find按钮
-//		Select select=new Select(country);
-//		select.selectByValue("China");
-//		select.selectByIndex(2);
-//		select.deselectByIndex(2);
-//		select.selectByVisibleText("Angola");
-		//input[@id='userId']
+		wait.until(ExpectedConditions.presenceOfElementLocated(By
+				.id("tracing_by_booking_f:hl10")));//等待网页响应完成，这里以Booking No.的label出现算ok
+		jse.executeScript("alert('This is my alert!')") ;
+		System.out.println("url: "+driver.getCurrentUrl());
+		WebElement findButton = driver.findElement(By
+				.xpath("//input[@id='tracing_by_booking_f:hl18']"));//Find按钮
+		WebElement bookingInput = driver.findElement(By//Booking No.输入框
+				.xpath("//input[@id='tracing_by_booking_f:hl12']"));
+		//输入框输入number
+		jse.executeScript("arguments[0].setAttribute('value', arguments[1])", bookingInput, number);//bookingInput.sendKeys(number);
+		//点击Find按钮
+		jse.executeScript("arguments[0].click();", findButton);	//findButton.click();
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(By
+				.xpath("//input[@id='tracing_by_booking_f:hl27:hl53']")));//等待Details按钮
+		
+		By by=By.className("hal-table-body");
+		By by1=By.tagName("dd");
+		By by2=By.id("");
+		
+		WebElement trEle = driver.findElement(By.className("hal-table-body")).findElements(By.tagName("tr"))
+				.get(0).findElements(By.tagName("td")).get(0).findElement(By.tagName("input"));//第一个单选按钮
+		trEle.click();
+		 Actions action = new Actions(driver); 
+		 action.clickAndHold();
+		Assert.assertTrue(trEle.isSelected());
+//		RemoteWebDriverUtil.snapshot((TakesScreenshot) driver);
+		
+		System.out.println("url: "+driver.getCurrentUrl());
 		
 	}
 

@@ -6,9 +6,9 @@
 
 
    <test name="FirefoxTest">
-      <parameter name="browser" value="firefox" />
+      <parameter name="browser" value="chrome" />
       <classes>
-             <class name="com.cs.test.SeleniumTest" />
+             <class name="com.cs.test.SeleniumTest2" />
       </classes>
    </test>
    

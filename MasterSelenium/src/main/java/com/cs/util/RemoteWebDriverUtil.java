@@ -7,7 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -22,28 +21,22 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import com.cs.bean.WebSuite;
-
 public class RemoteWebDriverUtil {
 	static DesiredCapabilities sCaps = null;
 	static String Host = null;
 	static String PhanTomJsPath = null;
 	static String GhostPath = null;
-	public static WebDriver driver;
+//	public static WebDriver driver;
 
-	public static void loadDriver1(String host, String browser) {
 
-		int caseNum = Loader.suite.getCases().size();
 
-	}
-
-	public static WebDriver loadDriver(String host, String browser) {
+	public static  WebDriver loadDriver(String host, String browser) {
 		if (browser.contains("chrome")) {
 			return getChromeDriver(host);
 		} else if (browser.contains("firefox")) {
 			return getFirefoxDriver(host);
 		}
-		return driver;
+		return null;
 
 	}
 
@@ -109,7 +102,7 @@ public class RemoteWebDriverUtil {
 	}
 
 	public static WebDriver getChromeDriver(String host) {
-		sCaps = DesiredCapabilities.chrome();
+		DesiredCapabilities sCaps = DesiredCapabilities.chrome();
 		WebDriver driver = null;
 		try {
 			driver = new RemoteWebDriver(new URL(host), sCaps);
@@ -121,7 +114,7 @@ public class RemoteWebDriverUtil {
 	}
 
 	public static WebDriver getFirefoxDriver(String host) {
-		sCaps = DesiredCapabilities.firefox();
+		DesiredCapabilities sCaps = DesiredCapabilities.firefox();
 		WebDriver driver = null;
 		try {
 			driver = new RemoteWebDriver(new URL(host), sCaps);

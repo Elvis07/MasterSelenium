@@ -9,14 +9,18 @@ public class Task {
 
 	@XmlElement(name = "TaskSequence")
 	public int taskSeq;
-	@XmlElement(name = "Locator")
-	public String locator;
+	@XmlElement(name = "Element")
+	public Element element;
 	@XmlElement(name = "InputValue")
 	public String inputValue;
 	@XmlElement(name = "Url")
 	public String url;
 	@XmlElement(name = "Description")
 	public String description;
+	@XmlElement(name = "ScrollFrom")
+	public String scrollFrom;
+	@XmlElement(name = "ScrollTo")
+	public String scrollTo;
 
 	public Task() {
 		super();
@@ -30,12 +34,12 @@ public class Task {
 		this.taskSeq = taskSeq;
 	}
 
-	public String getLocator() {
-		return locator;
+	public Element getElement() {
+		return element;
 	}
 
-	public void setLocator(String locator) {
-		this.locator = locator;
+	public void setElement(Element element) {
+		this.element = element;
 	}
 
 	public String getInputValue() {
@@ -60,6 +64,22 @@ public class Task {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getScrollFrom() {
+		return scrollFrom;
+	}
+
+	public void setScrollFrom(String scrollFrom) {
+		this.scrollFrom = scrollFrom;
+	}
+
+	public String getScrollTo() {
+		return scrollTo;
+	}
+
+	public void setScrollTo(String scrollTo) {
+		this.scrollTo = scrollTo;
 	}
 
 }

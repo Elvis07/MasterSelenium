@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebSuite>
+	<WebCase>
+		<Description>测试百度</Description>
+		<TimeOut>20</TimeOut>
+		<Task>
+			<TaskSequence>1</TaskSequence>
+			<Url>https://jazz.net/</Url>
+			<Description>opensite</Description>
+		</Task>
+		<Task>
+			<TaskSequence>2</TaskSequence>
+			<Element by="xpath">
+				<locator>//a[@id='sign-up-button']</locator>
+			</Element>
+			<Description>click</Description>
+		</Task>
+		<Task>
+			<TaskSequence>3</TaskSequence>
+			<Element by="id">
+				<locator>su</locator>
+			</Element>
+			<Description>click</Description>
+		</Task>
+		<Task>
+			<TaskSequence>4</TaskSequence>
+			<Description>snapshot</Description>
+		</Task>
+		<Task>
+			<TaskSequence>5</TaskSequence>
+			<Element by="xpath">
+				<locator>//i[@class='c-icon c-icon-bear-p']</locator>
+			</Element>
+			<Description>wait</Description>
+		</Task>
+	</WebCase>
+</WebSuite>

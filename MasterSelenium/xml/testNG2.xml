@@ -2,10 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
 
-	<parameter name="xmlPath" value="\testSuite.xml"></parameter>
-	
-	
-	
+	<parameter name="xmlPath" value="\src\main\resources\testSuite.xml"></parameter>
 	<test name="firefox_test">
 		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
 		<parameter name="browser" value="chrome"></parameter>
@@ -13,8 +10,6 @@
 			<class name="com.cs.test.SeleniumTest" />
 		</classes>
 	</test>
-	
-	
 	<test name="chrome_test">
 		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
 		<parameter name="browser" value="firefox"></parameter>
