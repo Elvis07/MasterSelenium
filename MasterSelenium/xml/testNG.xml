@@ -6,7 +6,7 @@
 
 
    <test name="FirefoxTest">
-      <parameter name="browser" value="chrome" />
+      <parameter name="browser" value="phantom" />
       <classes>
              <class name="com.cs.test.SeleniumTest2" />
       </classes>

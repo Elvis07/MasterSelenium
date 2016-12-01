@@ -18,7 +18,7 @@ public class SeleniumTest {
 
 	WebDriver driver;
 
-	@Parameters({ "host", "browser", "xmlPath" }) //
+	@Parameters({ "host", "browser", "xmlPath" }) 
 	@BeforeTest
 	public void beforeTest(String host, String browser, String xmlPath)
 			throws InterruptedException, JAXBException, IOException {
@@ -30,12 +30,14 @@ public class SeleniumTest {
 	public void test() throws InterruptedException {
 
 		Executor.execute(driver);
+		System.out.println(driver.getTitle());
 
 	}
 
 	@AfterTest
 	public void afterTest() {
 		driver.close();
+		driver.quit();
 	}
 
 }

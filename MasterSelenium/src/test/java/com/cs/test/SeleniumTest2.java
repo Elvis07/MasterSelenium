@@ -23,11 +23,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.cs.util.RemoteWebDriverUtil;
+import com.cs.util.SnapshotUtil;
 
 public class SeleniumTest2 {
 
 	public WebDriver driver;
-	String url = "https://jazz.net/action/register";
+	String url = "http://www.zim.com/pages/findyourroute.aspx?origincode=HKHKG;10&origincodetext=Hong Kong -- Hong Kong&destcode=SGSIN;10&destcodetext=Singapore -- Singapore&fromdate=28/11/2016&todate=10/01/2017&mode=1&searchdimention=0&schedule=view0";
 	String number="97564765";
 	@Parameters("browser")
 //	@Parameters( { "host", "browser", "xmlPath"})// 按先后顺序
@@ -66,8 +67,9 @@ public class SeleniumTest2 {
 //			driver = new InternetExplorerDriver();
 		} else {
 			cap=DesiredCapabilities.phantomjs();
-			cap.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, true);
-			cap.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,RemoteWebDriverUtil.getGhostDriverPath());
+			cap.setCapability("phantomjs.page.settings.loadImages", false);
+//			cap.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, true);
+//			cap.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,RemoteWebDriverUtil.getGhostDriverPath());
 			driver=new PhantomJSDriver(cap);
 		}
 	
@@ -79,14 +81,37 @@ public class SeleniumTest2 {
 
 		driver.manage().window().maximize();
 		driver.get(url);
-		
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		WebElement country = driver.findElement(By.xpath("//input[@id='userId']"));
-		country.sendKeys("dd");
-		WebElement country1 = driver.findElement(By.xpath("//input[@id='termsAgreed1']"));
-		country1.click();
-		
+		SnapshotUtil.snapshot(driver);
+		String response=driver.getPageSource();
+		if (response.contains("US Land Transportation")) {
+			System.out.println("good");
+		}
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//		
+//		
+//		WebElement country = driver.findElement(By.xpath("//input[@id='ctl00_PlaceHolderRightSideBar_ctl00_schedulesWidget_findYourRouteNew2_txtFrom']"));
+//		country.sendKeys("Hong Kong -- Hong Kong");
+//		SnapshotUtil.snapshot(driver);
+//		WebElement country1 = driver.findElement(By.xpath("//input[@id='ctl00_PlaceHolderRightSideBar_ctl00_schedulesWidget_findYourRouteNew2_txtTo']"));
+//		country1.sendKeys("Singapore -- Singapore");
+//		SnapshotUtil.snapshot(driver);
+//		WebElement find = driver.findElement(By.xpath("//input[@class='find_button ie6_margin top find_your_route_btn']"));
+//		jse.executeScript("arguments[0].click();", find);  
+//		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//th[contains(.,'Vessel Name')]")));
+//		for(int i=0;i<=111111;i++){
+//			try {
+//				Thread.sleep(3000);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			SnapshotUtil.snapshot(driver);
+//		}
+//		SnapshotUtil.snapshot(driver);
+//		country1.click();
+//		System.out.println("sddd");
+//		System.out.println("sddd");
 //		WebElement country = driver.findElement(By.id("countryResidence"));//Find按钮
 //		Select select=new Select(country);
 //		select.selectByValue("China");

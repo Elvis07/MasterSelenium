@@ -25,8 +25,14 @@ public class InteractionMapping {
 		case "snapshot":
 			Interaction.snapshot(driver);
 			break;
-
+		case "select":
+			Interaction.select(driver, task);
+			break;
+		case "scroll":
+			Interaction.scroll(driver, task);
+			break;
 		}
+		System.out.println("execute " + task.getDescription());
 
 	}
 

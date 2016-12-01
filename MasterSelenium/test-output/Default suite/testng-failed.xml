@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <parameter name="xmlPath" value="not-found"/>
+  <parameter name="browser" value="not-found"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.cs.test.SeleniumTest">
+      <class name="com.cs.test.SeleniumTest3">
         <methods>
-          <include name="test"/>
+          <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.cs.test.SeleniumTest -->
+      </class> <!-- com.cs.test.SeleniumTest3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

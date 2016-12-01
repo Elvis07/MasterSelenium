@@ -1,6 +1,8 @@
 package com.cs.core;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 import com.cs.bean.Task;
 import com.cs.bean.WebSuite;
@@ -17,6 +19,7 @@ public class Executor {
 		for (int i = 0; i < length; i++) {
 			Task task = suite.getCases().get(0).getTasks().get(i);
 			InteractionMapping.runInteraction(driver, task);
+			
 		}
 
 	}

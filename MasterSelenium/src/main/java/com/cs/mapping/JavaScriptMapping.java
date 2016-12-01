@@ -17,6 +17,11 @@ public class JavaScriptMapping{
 		jse.executeScript("arguments[0].setAttribute('value', arguments[1])", element, toSend);
 	}
 	
+	public static void scroll(WebDriver driver,WebElement element) {
+		JavascriptExecutor jse=(JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollIntoView();", element);
+	}
+	
 	
 
 }

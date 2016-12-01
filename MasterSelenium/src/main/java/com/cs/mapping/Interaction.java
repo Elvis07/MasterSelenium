@@ -3,6 +3,7 @@ package com.cs.mapping;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cs.bean.Task;
@@ -39,6 +40,16 @@ public class Interaction {
 
 	public static void snapshot(WebDriver driver) {
 		SnapshotUtil.snapshot(driver);
+	}
+	
+	public static void select(WebDriver driver,Task task) {
+		Select selects =new Select(driver.findElement(ByMapping.getBy(task)));
+		selects.selectByValue(task.getInputValue());
+	}
+	
+	public static void scroll(WebDriver driver,Task task) {
+		WebElement element = driver.findElement(ByMapping.getBy(task));
+		JavaScriptMapping.scroll(driver, element);
 	}
 
 }

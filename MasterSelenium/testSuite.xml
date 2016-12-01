@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebSuite>
 	<WebCase>
-		<Description>测试百度</Description>
+		<Description>测试jazz</Description>
 		<TimeOut>20</TimeOut>
-		
-		
 		<Task>
 			<TaskSequence>1</TaskSequence>
-			<Url>http://www.baidu.com</Url>
+			<Url>https://jazz.net/action/register</Url>
 			<Description>opensite</Description>
 		</Task>
 		<Task>
 			<TaskSequence>2</TaskSequence>
 			<Element by="xpath">
-				<locator>//input[@id='kw']</locator>
+				<locator>//input[@id='firstname']</locator>
 			</Element>
-			<InputValue>selenium</InputValue>
+			<InputValue>jazz</InputValue>
 			<Description>sendkeys</Description>
 		</Task>
 		<Task>
 			<TaskSequence>3</TaskSequence>
 			<Element by="id">
-				<locator>su</locator>
+				<locator>countryResidence</locator>
 			</Element>
-			<Description>click</Description>
+			<InputValue>Cambodia</InputValue>
+			<Description>select</Description>
 		</Task>
 		<Task>
 			<TaskSequence>4</TaskSequence>
@@ -31,10 +30,24 @@
 		</Task>
 		<Task>
 			<TaskSequence>5</TaskSequence>
-			<Element by="xpath">
-				<locator>//i[@class='c-icon c-icon-bear-p']</locator>
+			<Element by="id">
+				<locator>countryResidence</locator>
 			</Element>
 			<Description>wait</Description>
+		</Task>
+		<Task>
+			<TaskSequence>6</TaskSequence>
+			<Element by="name">
+				<locator>NC_CHECK_EMAIL</locator>
+			</Element>
+			<Description>click</Description>
+		</Task>
+		<Task>
+			<TaskSequence>7</TaskSequence>
+			<Element by="xpath">
+				<locator>//img[@alt='Facebook']</locator>
+			</Element>
+			<Description>scroll</Description>
 		</Task>
 	</WebCase>
 </WebSuite>

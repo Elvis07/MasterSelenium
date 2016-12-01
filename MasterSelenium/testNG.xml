@@ -4,8 +4,6 @@
 
 	<parameter name="xmlPath" value="\testSuite.xml"></parameter>
 	
-	
-	
 	<test name="firefox_test">
 		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
 		<parameter name="browser" value="chrome"></parameter>
@@ -13,13 +11,23 @@
 			<class name="com.cs.test.SeleniumTest" />
 		</classes>
 	</test>
-	
-	
+<!-- 
 	<test name="chrome_test">
 		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
-		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.cs.test.SeleniumTest" />
 		</classes>
 	</test>
+	
+	<test name="ie_test">
+		<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
+		<parameter name="browser" value="ie"></parameter>
+		<classes>
+			<class name="com.cs.test.SeleniumTest" />
+		</classes>
+	</test>
+ -->	
+	
+	
 </suite>
