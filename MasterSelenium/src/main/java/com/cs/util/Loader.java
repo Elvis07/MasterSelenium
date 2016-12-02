@@ -4,7 +4,9 @@ import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
 
-import com.cs.bean.WebSuite;
+import com.cs.data.WebSuite;
+
+
 
 public class Loader {
 
@@ -15,6 +17,5 @@ public class Loader {
 		String xmlPath = System.getProperty("user.dir") + path;
 		Object object = XMLUtils.xmlToBean(xmlPath, WebSuite.class);
 		suite = (WebSuite) object;
-		timeOut=suite.getCases().get(0).getTimeOut();
 	}
 }

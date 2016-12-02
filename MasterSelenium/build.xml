@@ -1,21 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
-<project name="HelloWorld" default="compile" basedir=".">  
-<property name="src" value="src"/>  
-<property name="dest" value="classes"/>  
-<property name="hello_jar" value="hello1.jar"/>  
-	
-
-
-<target name="compile" depends="init">  
-   <javac srcdir="${src}" destdir="${dest}"/>  
-</target> 
-<!--
-<target name="testNG" depends="compile">
-	<echo message="run testNG" /> 
-	<exec executable="cmd" failonerror="true">
-		<arg line="java org.testng.TestNG " /> 
-		<arg line="-nodeConfig ${config}" /> 
-		<arg line="-Dwebdriver.ie.driver=${ie}" /> 
-	</exec>
--->
-</project>  
+<project name="MasterSelenium" basedir="." >
+    <property name="lib.dir" value="lib" />
+    <path id="test.classpath" >
+         <!-- adding the saxon jar to your classpath -->
+        <fileset dir="${lib.dir}" includes="*.jar" />
+    </path>
+    <target name="transform" >
+        <!-- 需要根据自己的环境进行配置（将E:/workspace/testNG/替换成你自己project的目录） -->
+        <xslt in="D:/new_git/MasterSelenium/MasterSelenium/test-output/testng-results.xml" style="D:/new_git/MasterSelenium/MasterSelenium/test-output/testng-results.xsl"
+  out="E:/workspace/testNG/test-output/index1.html" >
+             <!-- 需要根据自己的环境进行配置（将E:/workspace/testNG/替换成你自己project的目录） -->
+            <param name="testNgXslt.outputDir" expression="D:/new_git/MasterSelenium/MasterSelenium/test-output/" />
+            <classpath refid="test.classpath" />
+        </xslt>
+    </target>
+</project>

@@ -8,22 +8,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.cs.util.RemoteWebDriverUtil;
-import com.thoughtworks.selenium.Selenium;
 
 public class SeleniumTest3 {
 
@@ -85,6 +79,8 @@ public class SeleniumTest3 {
 		driver.manage().window().maximize();
 		driver.get(url);
 
+//		Color s=driver.findElement(By.id("sign-up-button")).getCssValue("color");
+				
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		WebElement country = driver.findElement(By.xpath("//input[@id='userId']"));

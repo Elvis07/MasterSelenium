@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="jazz">
+
+	<parameter name="host" value="http://10.222.48.46:5555/wd/hub"></parameter>
+
+	<test name="chrome_reigister1" preserve-order="true">
+		<parameter name="xmlPath" value="\xml\jazzSuite.xml"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.cs.test.JazzTest">
+				<methods>
+					<include name="register" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 
