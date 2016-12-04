@@ -81,7 +81,7 @@ public class SeleniumTest2 {
 
 		driver.manage().window().maximize();
 		driver.get(url);
-		SnapshotUtil.snapshot(driver);
+//		SnapshotUtil.snapshot(driver);
 		String response=driver.getPageSource();
 		if (response.contains("US Land Transportation")) {
 			System.out.println("good");

@@ -1,6 +1,6 @@
 package com.cs.page;
 
-import com.cs.exception.ParseResultException;
+import com.cs.exception.TestFailException;
 
 public interface BasePage {
 
@@ -8,5 +8,5 @@ public interface BasePage {
 
 	public void close();
 
-	public boolean isRedirectSuccess() throws ParseResultException;
+	public boolean isRedirectSuccess() throws  TestFailException;
 }

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-jazz">
-              <span class="suite-name border-failed">jazz</span>
+              <span class="suite-name border-passed">jazz</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-jazz">
-                    <span>D:\new_git\MasterSelenium\MasterSelenium\best_NG.xml</span>
+                    <span>E:\git-clone\MasterSelenium\MasterSelenium\testNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-jazz" class="hide-methods failed suite-jazz"> (hide)</a> <!-- hide-methods failed suite-jazz -->
-                      <a href="#" panel-name="suite-jazz" class="show-methods failed suite-jazz"> (show)</a> <!-- show-methods failed suite-jazz -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-jazz" class="hide-methods passed suite-jazz"> (hide)</a> <!-- hide-methods passed suite-jazz -->
+                      <a href="#" panel-name="suite-jazz" class="show-methods passed suite-jazz"> (show)</a> <!-- show-methods passed suite-jazz -->
                     </span>
-                    <div class="method-list-content failed suite-jazz">
+                    <div class="method-list-content passed suite-jazz">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-jazz" title="com.cs.test.JazzTest" hash-for-method="register">register</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-jazz" title="com.cs.test.JazzTest" hash-for-method="forgotPwd">forgotPwd</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-jazz -->
+                    </div> <!-- method-list-content passed suite-jazz -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,56 +117,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-jazz" class="panel jazz">
-          <div class="suite-jazz-class-failed">
+          <div class="suite-jazz-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.cs.test.JazzTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="register">
-                  </a> <!-- register -->
-                  <span class="method-name">register</span>
-                  <div class="stack-trace">com.cs.exception.ParseResultException: Form data are wrong
-	at com.cs.interaction.RegisterInteraction.isRedirectSuccess(RegisterInteraction.java:63)
-	at com.cs.test.JazzTest.register(JazzTest.java:19)
-Caused by: org.openqa.selenium.TimeoutException: Timed out after 3 seconds waiting for element ([[RemoteWebDriver: chrome on XP (60a5e05e-7a9f-4090-a000-c0a1bb2a6e9c)] -&gt; id: NC_CHECK_EMAIL]) to become stale
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
-System info: host: &apos;CS-VEC004-W7&apos;, ip: &apos;10.222.48.46&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_73&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\ZENGEL\AppData\Local\Temp\scoped_dir11024_17190}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=60a5e05e-7a9f-4090-a000-c0a1bb2a6e9c, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 60a5e05e-7a9f-4090-a000-c0a1bb2a6e9c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.cs.interaction.RegisterInteraction.isRedirectSuccess(RegisterInteraction.java:58)
-	... 26 more
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
+                  <a name="forgotPwd">
+                  </a> <!-- forgotPwd -->
+                  <span class="method-name">forgotPwd</span>
                   <em>
-(test register)                  </em>
+(test forgotPwd)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-jazz-class-failed -->
+          </div> <!-- suite-jazz-class-passed -->
         </div> <!-- panel jazz -->
         <div panel-name="test-xml-jazz" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\new_git\MasterSelenium\MasterSelenium\best_NG.xml</span>
+            <span class="header-content">E:\git-clone\MasterSelenium\MasterSelenium\testNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;jazz&quot;&gt;
-  &lt;parameter name=&quot;host&quot; value=&quot;http://10.222.48.46:5555/wd/hub&quot;/&gt;
+  &lt;parameter name=&quot;host&quot; value=&quot;http://192.168.0.107:4444/wd/hub&quot;/&gt;
+  &lt;parameter name=&quot;dataPath&quot; value=&quot;\xml\jazzSuite.xml&quot;/&gt;
   &lt;test name=&quot;chrome_reigister1&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;xmlPath&quot; value=&quot;\xml\jazzSuite.xml&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.cs.test.JazzTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;register&quot;/&gt;
+          &lt;include name=&quot;forgotPwd&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.cs.test.JazzTest --&gt;
     &lt;/classes&gt;
@@ -210,14 +195,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'register')
+data.setCell(0, 1, 'forgotPwd')
 data.setCell(0, 2, 'com.cs.test.JazzTest')
-data.setCell(0, 3, 22276);
+data.setCell(0, 3, 11875);
 window.suiteTableData['jazz']= { tableData: data, tableDiv: 'times-div-jazz'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-jazz">
               </div> <!-- times-div-jazz -->
             </div> <!-- times-div -->
@@ -232,9 +217,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-jazz" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.cs.test.JazzTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">register</span>
+                <br/>
+                <span class="ignored-method-name">login</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-jazz" class="panel">
@@ -245,18 +239,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.cs.test.JazzTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(http://10.222.48.46:5555/wd/hub, chrome, \xml\jazzSuite.xml)</span>
+                <span class="method-name">beforeTest(http://192.168.0.107:4444/wd/hub, chrome, \xml\jazzSuite.xml)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">register</span>
-                <span class="method-start">1754 ms</span>
+                <span class="method-name">forgotPwd</span>
+                <span class="method-start">3836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">24037 ms</span>
+                <span class="method-start">15717 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -75,4 +75,12 @@ public class RegisterPage {
 		PageFactory.initElements(driver, this);
 	}
 
+	@Override
+	public String toString() {
+		return "RegisterPage";
+	}
+
+
+	
+
 }

@@ -12,10 +12,10 @@ import org.openqa.selenium.WebDriver;
 
 public class SnapshotUtil {
 
-	public static void snapshot(WebDriver driver) {
+	public static void snapshot(WebDriver driver,String page) {
 		Date date = new Date();
-		SimpleDateFormat df3 = new SimpleDateFormat("HH-mm-ss");
-		String filename = df3.format(date) + ".png";
+		SimpleDateFormat df3 = new SimpleDateFormat("HHmmss");
+		String filename = df3.format(date) +"_"+page +".png";
 		// String currentPath = System.getProperty("user.dir"); // get current
 		// System.out.println(currentPath);
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

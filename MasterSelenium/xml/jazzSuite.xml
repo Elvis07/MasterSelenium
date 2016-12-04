@@ -12,4 +12,12 @@
 		<Password1>cselvis12</Password1>
 		<Password2>cselvis12</Password2>
 	</RegisterData>
+	<LoginData>
+		<UserID>cseld1123</UserID>
+		<Password>cselvis12</Password>
+	</LoginData>
+	<ForgotPwdData>
+		<RequestPasswordReset_userID>janny</RequestPasswordReset_userID>
+		<RequestPasswordReset_email>156440668@qq.com</RequestPasswordReset_email>
+	</ForgotPwdData>
 </WebSuite>

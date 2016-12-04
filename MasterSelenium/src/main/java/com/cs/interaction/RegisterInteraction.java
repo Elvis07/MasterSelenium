@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cs.data.RegisterData;
-import com.cs.exception.ParseResultException;
+import com.cs.exception.TestFailException;
 import com.cs.page.BasePage;
 import com.cs.page.RegisterPage;
 import com.cs.util.Loader;
@@ -51,16 +51,18 @@ public class RegisterInteraction extends RegisterPage implements BasePage {
 	}
 
 	@Override
-	public boolean isRedirectSuccess() throws ParseResultException {
+	public boolean isRedirectSuccess() throws TestFailException {
 
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 30);
+			WebDriverWait wait = new WebDriverWait(driver, 3);
 			wait.until(ExpectedConditions.stalenessOf(byEmail));
 			return true;
 		} catch (Exception e) {
-			SnapshotUtil.snapshot(driver);
-			throw new ParseResultException(e);
+			SnapshotUtil.snapshot(driver,"RegisterPage");
+			throw new TestFailException("Form Dada are wrong",e);
 		}
 	}
+	
+	
 
 }

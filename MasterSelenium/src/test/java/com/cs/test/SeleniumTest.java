@@ -9,20 +9,19 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.cs.util.DriverFactory;
 import com.cs.util.Loader;
-import com.cs.util.RemoteWebDriverUtil;
 
 public class SeleniumTest {
 
 	protected WebDriver driver;
 
-	@Parameters({ "host", "browser", "xmlPath" })
+	@Parameters({ "host", "browser", "dataPath" })
 	@BeforeTest
-	public void beforeTest(String host, String browser, String xmlPath)
+	public void beforeTest(String host, String browser, String path)
 			throws InterruptedException, JAXBException, IOException {
-		Loader.loadSuite(xmlPath);
-		driver = RemoteWebDriverUtil.loadDriver(host, browser);
-		driver.manage().window().maximize();
+		Loader.loadSuite(path);
+		driver = DriverFactory.getRemoteDriver(host, browser);
 	}
 
 	@AfterTest
