@@ -8,5 +8,5 @@ public interface BasePage {
 
 	public void close();
 
-	public boolean isRedirectSuccess() throws  TestFailException;
+	public boolean isRedirectSuccess() throws TestFailException;
 }

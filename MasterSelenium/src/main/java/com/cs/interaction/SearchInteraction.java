@@ -5,19 +5,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cs.data.LoginData;
+import com.cs.data.SearchData;
 import com.cs.exception.TestFailException;
 import com.cs.page.BasePage;
 import com.cs.page.LoginPage;
+import com.cs.page.SearchPage;
 import com.cs.util.Loader;
 import com.cs.util.SnapshotUtil;
 
-public class LoginInteraction extends LoginPage implements BasePage {
+public class SearchInteraction extends SearchPage implements BasePage {
 
-	private LoginData data;
+	private SearchData data;
 
-	public LoginInteraction(WebDriver driver) {
+	public SearchInteraction(WebDriver driver) {
 		super(driver);
-		this.data = Loader.suite.getLoginData();
+		this.data = Loader.suite.getSearchData();
 	}
 
 	@Override
@@ -28,14 +30,12 @@ public class LoginInteraction extends LoginPage implements BasePage {
 	@Override
 	public void openSite() {
 
-		driver.get("https://jazz.net/");
+		driver.get("https://jazz.net/search/");
 	}
 	
-	public void login(){
-		Interaction.clickAndWait(getLogin, 2000);
-		Interaction.inputValue(userId,data.getUserid());
-		Interaction.inputValue(password, data.getPassword());
-		loginButton.click();
+	public void search(){
+		Interaction.inputValue(searchBox,data.getSearingValue());
+		seachButton.click();
 	}
 
 	@Override
@@ -43,11 +43,11 @@ public class LoginInteraction extends LoginPage implements BasePage {
 
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.stalenessOf(getLogin));
+			wait.until(ExpectedConditions.visibilityOf(Message));
 			return true;
 		} catch (Exception e) {
-			SnapshotUtil.snapshot(driver,"LoginPage");
-			throw new TestFailException("Invalid user ID or password",e);
+			SnapshotUtil.snapshot(driver,"SearchPage");
+			throw new TestFailException("We're sorry. We could not process your search request",e);
 		}
 	}
 	

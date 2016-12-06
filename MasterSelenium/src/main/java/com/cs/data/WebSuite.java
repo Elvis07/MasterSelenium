@@ -11,12 +11,15 @@ public class WebSuite {
 
 	@XmlElement(name = "RegisterData")
 	public RegisterData regiterdata;
-	
+
 	@XmlElement(name = "LoginData")
 	public LoginData loginData;
-	
+
 	@XmlElement(name = "ForgotPwdData")
 	public ForgotPwdData forgotPwdData;
+
+	@XmlElement(name = "SearchData")
+	public SearchData searchData;
 
 	public RegisterData getRegiterdata() {
 		return regiterdata;
@@ -40,6 +43,14 @@ public class WebSuite {
 
 	public void setForgotPwdData(ForgotPwdData forgotPwdData) {
 		this.forgotPwdData = forgotPwdData;
+	}
+
+	public SearchData getSearchData() {
+		return searchData;
+	}
+
+	public void setSearchData(SearchData searchData) {
+		this.searchData = searchData;
 	}
 
 	public WebSuite() {

@@ -48,7 +48,7 @@ public class ForgotPwdInteraction extends ForgotPwdPage implements BasePage{
 			}
 		}
 	
-	public void forgotPwdForm(){
+	public void fillForgotPwdForm(){
 		Interaction.inputValue(RequestPasswordReset_userID, data.getRequestPasswordReset_userID());
 		Interaction.inputValue(RequestPasswordReset_email, data.getRequestPasswordReset_email());
 		submitResetPwd.click();

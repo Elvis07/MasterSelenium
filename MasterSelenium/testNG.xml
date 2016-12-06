@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="jazz">
+<suite name="jazz" parallel="tests">
 
-	<parameter name="host" value="http://192.168.0.107:4444/wd/hub"></parameter>
 	<parameter name="dataPath" value="\xml\jazzSuite.xml"></parameter>
-
-	<test name="chrome_reigister1" preserve-order="true">
+	<parameter name="host" value="http://10.222.48.46:4444/wd/hub"></parameter>
+	
+	<test name="chrome_reigister" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.cs.test.JazzTest" >
+				<methods>
+				<!-- 
+					<include name="register" />
+					<include name="login" />
+				 -->
+					<include name="forgotPwd" />
+					<include name="search" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+<!--
+	<test name="firefox_login">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.cs.test.JazzTest">
+				<methods>
+					<include name="login" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="ie_forgotpassword">
+		<parameter name="browser" value="ie"></parameter>
 		<classes>
 			<class name="com.cs.test.JazzTest">
 				<methods>
@@ -15,5 +42,6 @@
 			</class>
 		</classes>
 	</test>
+ -->
 
 </suite> 

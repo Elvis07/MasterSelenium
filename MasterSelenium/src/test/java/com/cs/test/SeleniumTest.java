@@ -4,7 +4,9 @@ import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
 
+import org.junit.After;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -29,5 +31,6 @@ public class SeleniumTest {
 		driver.close();
 		driver.quit();
 	}
+
 
 }

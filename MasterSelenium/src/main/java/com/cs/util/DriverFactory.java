@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -27,6 +28,7 @@ public class DriverFactory {
         }
 //      setBrowserInfo(caps);
         WebDriver driver = null;
+        
         try {
             driver = new RemoteWebDriver(new URL(host), caps);
         } catch (MalformedURLException e) {

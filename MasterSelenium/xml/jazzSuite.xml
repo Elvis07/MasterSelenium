@@ -18,6 +18,10 @@
 	</LoginData>
 	<ForgotPwdData>
 		<RequestPasswordReset_userID>janny</RequestPasswordReset_userID>
-		<RequestPasswordReset_email>156440668@qq.com</RequestPasswordReset_email>
+		<RequestPasswordReset_email>156440668@qq.com
+		</RequestPasswordReset_email>
 	</ForgotPwdData>
+	<SearchData>
+		<SearchingValue>selenium</SearchingValue>
+	</SearchData>
 </WebSuite>
