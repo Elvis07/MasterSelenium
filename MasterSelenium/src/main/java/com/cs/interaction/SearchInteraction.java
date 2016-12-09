@@ -30,7 +30,7 @@ public class SearchInteraction extends SearchPage implements BasePage {
 	@Override
 	public void openSite() {
 
-		driver.get("https://jazz.net/search/");
+		driver.get("http://jazz.net/search/");
 	}
 	
 	public void search(){
@@ -43,7 +43,7 @@ public class SearchInteraction extends SearchPage implements BasePage {
 
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.visibilityOf(Message));
+			wait.until(ExpectedConditions.visibilityOf(divFilter));
 			return true;
 		} catch (Exception e) {
 			SnapshotUtil.snapshot(driver,"SearchPage");

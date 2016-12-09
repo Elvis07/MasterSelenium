@@ -11,15 +11,10 @@ import com.cs.interaction.SearchInteraction;
 
 public class JazzTest extends SeleniumTest {
 
-	RegisterInteraction regInteract;
-	LoginInteraction logInteract;
-	ForgotPwdInteraction pwdInteract;
-	SearchInteraction searchInteract;
-
 	@Test(description = "test register")
 	public void register() throws InterruptedException,TestFailException {
 
-		regInteract = new RegisterInteraction(driver);
+		RegisterInteraction regInteract = new RegisterInteraction(driver);
 		regInteract.openSite();
 		regInteract.fillForm();
 		Assert.assertTrue(regInteract.isRedirectSuccess());
@@ -28,7 +23,7 @@ public class JazzTest extends SeleniumTest {
 	@Test(description = "test login")
 	public void login() throws InterruptedException,TestFailException {
 
-		logInteract = new LoginInteraction(driver);
+		LoginInteraction logInteract = new LoginInteraction(driver);
 		logInteract.openSite();
 		logInteract.login();
 		Assert.assertTrue(logInteract.isRedirectSuccess());
@@ -36,15 +31,16 @@ public class JazzTest extends SeleniumTest {
 
 	@Test(description = "test forgotPwd")
 	public void forgotPwd() throws InterruptedException, TestFailException  {
-		pwdInteract = new ForgotPwdInteraction(driver);
+		ForgotPwdInteraction pwdInteract = new ForgotPwdInteraction(driver);
 		pwdInteract.openSite();
 		pwdInteract.fillForgotPwdForm();
 		Assert.assertTrue(pwdInteract.isRedirectSuccess());
 	}
 	
-	@Test(description = "test forgotPwd")
+	@Test(description = "test searching")
 	public void search() throws InterruptedException, TestFailException  {
-		searchInteract = new SearchInteraction(driver);
+		
+		SearchInteraction searchInteract = new SearchInteraction(driver);
 		searchInteract.openSite();
 		searchInteract.search();
 		Assert.assertTrue(searchInteract.isRedirectSuccess());

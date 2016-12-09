@@ -28,7 +28,7 @@ public class LoginInteraction extends LoginPage implements BasePage {
 	@Override
 	public void openSite() {
 
-		driver.get("https://jazz.net/");
+		driver.get("http://jazz.net/");
 	}
 	
 	public void login(){

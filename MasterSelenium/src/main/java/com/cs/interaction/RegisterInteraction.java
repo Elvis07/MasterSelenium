@@ -47,7 +47,7 @@ public class RegisterInteraction extends RegisterPage implements BasePage {
 	@Override
 	public void openSite() {
 
-		driver.get("https://jazz.net/action/register");
+		driver.get("http://jazz.net/action/register");
 	}
 
 	@Override

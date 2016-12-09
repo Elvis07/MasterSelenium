@@ -16,9 +16,9 @@ public class SearchPage {
 	@CacheLookup
 	public WebElement searchBox;
 	
-	@FindBy(id = "messageSummary")
+	@FindBy(id = "peopleDiv")
 	@CacheLookup
-	public WebElement Message;
+	public WebElement divFilter;
 
 	protected WebDriver driver;
 

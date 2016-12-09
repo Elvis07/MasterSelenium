@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ForgotPwdPage {
-	
+
 	@FindBy(id = "RequestPasswordReset_userID")
 	@CacheLookup
 	public WebElement RequestPasswordReset_userID;
@@ -16,15 +16,13 @@ public class ForgotPwdPage {
 	@CacheLookup
 	public WebElement RequestPasswordReset_email;
 
-	//TODO as submit & change password
 	@FindBy(id = "RequestPasswordReset_0")
 	@CacheLookup
 	public WebElement submitResetPwd;
-	
+
 	@FindBy(id = "title-profile")
 	@CacheLookup
-	public WebElement succsess_h1;
-
+	public WebElement success_h1;
 
 	protected WebDriver driver;
 

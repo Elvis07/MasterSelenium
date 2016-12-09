@@ -26,21 +26,20 @@ public class ForgotPwdInteraction extends ForgotPwdPage implements BasePage{
 	@Override
 	public void openSite() {
 		// TODO Auto-generated method stub
-		driver.get("https://jazz.net/pub/user/password-reset-request.jsp");
+		driver.get("https://jazz.net/pub/user/retrieve-userid.jsp");
+//		driver.get("http://jazz.net/pub/user/password-reset-request.jsp");
 	}
 
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public boolean isRedirectSuccess() throws TestFailException {
-		// TODO Auto-generated method stub
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.textToBePresentInElement(succsess_h1, "E-mail Sent"));
+			wait.until(ExpectedConditions.textToBePresentInElement(success_h1, "E-mail"));
 			return true;
 			} catch (Exception e) {
 				SnapshotUtil.snapshot(driver,"ForgotPwdPage");
